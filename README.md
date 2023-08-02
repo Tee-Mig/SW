@@ -16,5 +16,5 @@ _-pip install pytesseract_<br/>
 
 On windows 11, take a picture of the bluestacks 5 icon on the taskbar and replace the old bluestacks_icon.png by yours in the **img** folder.
 
-If there is a problem with the images permission go on the **img** folder ton write this on command line:
+If there is a problem with the images permission go on the **img** folder ton write this on command line:<br/>
 _-chmod 777 *_<br/>
