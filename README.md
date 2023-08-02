@@ -23,6 +23,6 @@ On windows 11, take a picture of the bluestacks 5 icon on the taskbar and replac
 If there is a problem with the images permission go on the **img** folder and write this on command line:<br/>
 _-chmod 777 *_<br/>
 
-##Run the program
+## Run the program
 _-navigate with the command **cd** and go on SW_bon/src/_</br>
 _-run "python main.c"_</br>
