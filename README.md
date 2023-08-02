@@ -24,4 +24,5 @@ If there is a problem with the images permission go on the **img** folder and wr
 _-chmod 777 *_<br/>
 
 ##Run the program
--navigate with the command **cd** and go on SW_bon/src/
+_-navigate with the command **cd** and go on SW_bon/src/_</br>
+_-run "python main.c"_</br>
