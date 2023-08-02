@@ -7,7 +7,7 @@
 -full hd screen<br/>
 
 ## Installation requirement:
-On commands prompt or git bash write:
+On commands prompt or git bash write:<br/>
 _-pip install --upgrade_<br/>
 _-pip install pyautogui_<br/>
 _-pip install pydirectinput_<br/>
