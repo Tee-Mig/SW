@@ -26,3 +26,4 @@ _-chmod 777 *_<br/>
 ## Run the program
 _-navigate with the command **cd** and go to SW_bon/src/_</br>
 _-run "python main.c"_</br>
+_-the repetition building must be visible_</br>
