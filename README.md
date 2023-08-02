@@ -8,7 +8,7 @@
 
 ## Installation requirement:
 On commands prompt or git bash write:
-_-pip install --upgrade_ __
+_-pip install --upgrade_<br/>
 _-pip install pyautogui_
 _-pip install pydirectinput_
 _-pip install pynput_
