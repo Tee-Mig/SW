@@ -1,6 +1,8 @@
 # SW
 
-## git clone 
+### *github_link -> go on code(green), local, ssh and copy the link<br/>
+### write git clone *github_link
+
 
 ## Program was done on this configuration:
 -Bluestacks 5, full screen with 240dpi<br/>
