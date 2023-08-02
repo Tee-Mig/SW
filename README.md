@@ -1,5 +1,7 @@
 # SW
 
+## git clone 
+
 ## Program was done on this configuration:
 -Bluestacks 5, full screen with 240dpi<br/>
 -resolution -> 1600 x 900<br/>
