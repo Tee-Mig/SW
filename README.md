@@ -1,7 +1,7 @@
 # SW
 
 ### *github_link -> go on code(green), local, ssh and copy the link<br/>
-### write git clone *github_link
+### write "git clone *github_link"
 
 
 ## Program was done on this configuration:
