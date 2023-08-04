@@ -347,7 +347,7 @@ def main():
                         "2_4_6_efficiency_legend_plus_9" : 0.687,
                         "2_4_6_efficiency_legend" : 0.758,
                 },
-                "do_dungeon_in_rta" : 0
+                "do_dungeon_in_rta" : 0,
                 "min_energy_launch_dungeon" : 90,
                 "world_boss_status" : 0,
                 "gvg_status" : 0,
