@@ -108,8 +108,8 @@ def check_team_and_run_rivaux():
 
         while (pyautogui.locateOnScreen('../img/solo_maximilian.png', region=(379, 174, 446, 453), confidence=0.95) == None):
             if (pyautogui.locateOnScreen('../img/solo_maximilian_shortcut.png', region=(227, 565, 513, 161), confidence=0.95)):
-                x_click = randint(260,708)
-                y_click = randint(306,398)
+                x_click = randint(260,703)
+                y_click = randint(599,693)
                 mouse.position = (x_click, y_click)
                 duree = uniform(0.06,0.1)
                 time.sleep(duree)
