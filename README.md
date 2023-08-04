@@ -17,6 +17,7 @@ _-pip install pyautogui_<br/>
 _-pip install pydirectinput_<br/>
 _-pip install pynput_<br/>
 _-pip install pytesseract_<br/>
+_-pip install opencv-python_<br/>
 
 On windows 11, take a picture of the bluestacks 5 icon on the taskbar and replace the old bluestacks_icon.png by yours in the **img** folder.
 
