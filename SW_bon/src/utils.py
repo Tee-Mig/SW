@@ -661,6 +661,8 @@ def launch_dungeon(status_dungeon, click_building_status, close_window_status, d
                             time.sleep(time_sleep)
 
                 if (status_dungeon == Dungeon_type.GIANT.value):
+                    for i in range(3);
+                        descend_liste_dj2()
                     while (pyautogui.locateOnScreen('../img/8_GO.png', region=(1408, 460, 224, 177), confidence=0.95) == None
                         and pyautogui.pixelMatchesColor(1202, 654, (100, 78, 33)) == False
                         and pyautogui.pixelMatchesColor(1197, 649, (202, 161, 71)) == False):
