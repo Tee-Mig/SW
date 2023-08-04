@@ -95,15 +95,15 @@ def check_team_and_run_rivaux():
         #     time_sleep = uniform(0.22,0.31)
         #     time.sleep(time_sleep)
 
-        x_click = randint(260,703)
-        y_click = randint(599,693)
-        mouse.position = (x_click, y_click)
-        duree = uniform(0.06,0.1)
-        time.sleep(duree)
-        mouse.press(Button.left)
-        mouse.release(Button.left)
+        # x_click = randint(260,703)
+        # y_click = randint(599,693)
+        # mouse.position = (x_click, y_click)
+        # duree = uniform(0.06,0.1)
+        # time.sleep(duree)
+        # mouse.press(Button.left)
+        # mouse.release(Button.left)
 
-        time_sleep = uniform(0.34,0.36)
+        time_sleep = uniform(0.31,0.34)
         time.sleep(time_sleep)
 
         while (pyautogui.locateOnScreen('../img/solo_maximilian.png', region=(379, 174, 446, 453), confidence=0.95) == None):
