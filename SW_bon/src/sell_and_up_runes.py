@@ -1075,7 +1075,7 @@ def take_screenshot_rune_kept_up(name):
 def take_screenshot_rune_sold_up(name):
     pyautogui.screenshot('../runes_vendues/' + name + str(round(randint(0, sys.maxsize), 5)) + '7' + str(round(randint(0, sys.maxsize), 5)) + '.png')
 
-def is_subs_fully_printed():
+def is_subs_fully_printed(amelioration, grade):
     pyt.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract"
 
     img = pyautogui.screenshot(region=(1036, 464, 284, 183)) # toutes les lignes
@@ -1098,23 +1098,28 @@ def is_subs_fully_printed():
     for i in range(len(split_text)):
             if (split_text[i].find('+')):
                     nb_plus = nb_plus + 1
-    if (nb_plus == 3):
+    if (amelioration == 12 or grade == "legend"):
+        if (nb_plus == 4):
+            return 1
+    if (amelioration == 9 or amelioration == 6 or grade == "heroic"):
+        if (nb_plus == 3):
             return 1
     return 0
 
 def rune_process_new(rune_data):
 
-    while (is_subs_fully_printed()):
+    time_sleep = uniform(0.42, 0.45)
+    time.sleep(time_sleep)
+
+    amelioration = get_amelioration()
+
+    while (is_subs_fully_printed(amelioration, rune_data["grade"])):
         time_sleep = uniform(0.15,0.18)
         time.sleep(time_sleep)
-
-    # time_sleep = uniform(2.8,2.9) # A CHANGER ET METTRE UN WHILE AVEC UNE CONDITION ?
-    # time.sleep(time_sleep)
 
     # good_sub = get_good_sub(subs)
     # print(f'good sub = {good_sub}')
     subs = get_subs_new()
-    amelioration = get_amelioration()
     slot = get_slot()
     # print(f'amelioration = {amelioration}')
     # print(f'slot = {slot}')
