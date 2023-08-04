@@ -659,8 +659,54 @@ def launch_dungeon(status_dungeon, click_building_status, close_window_status, d
 
                             time_sleep = uniform(0.44,0.47)
                             time.sleep(time_sleep)
+
+                if (status_dungeon == Dungeon_type.GIANT.value):
+                    while (pyautogui.locateOnScreen('../img/8_GO.png', region=(1408, 460, 224, 177), confidence=0.95) == None
+                        and pyautogui.pixelMatchesColor(1202, 654, (100, 78, 33)) == False
+                        and pyautogui.pixelMatchesColor(1197, 649, (202, 161, 71)) == False):
+                        if (pyautogui.locateOnScreen('../img/6_GO.png', region=(1316, 683, 392, 316), confidence=0.95)
+                            or pyautogui.locateOnScreen('../img/7_GO.png', region=(1316, 683, 392, 316), confidence=0.95)):
+                            while (pyautogui.locateOnScreen('../img/8_GO.png', region=(1408, 460, 224, 177), confidence=0.95) == None):
+                                descend_liste_dj2()
+                        time_sleep = uniform(0.22,0.31)
+                        time.sleep(time_sleep)
+
+                    while (pyautogui.locateOnScreen('../img/8_GO.png', region=(1408, 460, 224, 177), confidence=0.95)
+                            or pyautogui.pixelMatchesColor(1202, 654, (100, 78, 33))
+                            or pyautogui.pixelMatchesColor(1197, 649, (202, 161, 71))):
+                        x_click = randint(1449, 1581)
+                        y_click = randint(509, 603)
+                        mouse.position = (x_click, y_click)
+                        duree = uniform(0.06,0.1)
+                        time.sleep(duree)
+                        mouse.press(Button.left)
+                        mouse.release(Button.left)
+
+                        time_sleep = uniform(0.57,0.59)
+                        time.sleep(time_sleep)
+
+                        take_energy_dungeon()
+
+                    # click sur 9x10 combat a repetition
+                    while (pyautogui.locateOnScreen('../img/8x10_combat_repet.png', region=(1366, 635, 367, 201), confidence=0.95) == None):
+                        time_sleep = uniform(0.05,0.09)
+                        time.sleep(time_sleep)
+
+                    while (pyautogui.locateOnScreen('../img/8x10_combat_repet.png', region=(1366, 635, 367, 201), confidence=0.95)):
+                        x_pos_mob = pyautogui.locateOnScreen('../img/8x10_combat_repet.png', region=(1366, 635, 367, 201), confidence=0.95)
+                        x_click, y_click = pyautogui.center(x_pos_mob)
+                        x_click_add = randint(-136,126)
+                        y_click_add = randint(-45,45)
+                        x_click += x_click_add
+                        y_click += y_click_add
+                        duree = uniform(0.06,0.1)
+                        pyautogui.click(x_click,y_click,duration=duree)
+
+                        time_sleep = uniform(0.44,0.47)
+                        time.sleep(time_sleep)
                 
-                if (status_dungeon == Dungeon_type.GIANT.value or status_dungeon == Dungeon_type.DRAGON.value or status_dungeon == Dungeon_type.NECRO.value):
+                # if (status_dungeon == Dungeon_type.GIANT.value or status_dungeon == Dungeon_type.DRAGON.value or status_dungeon == Dungeon_type.NECRO.value):
+                if (status_dungeon == Dungeon_type.DRAGON.value or status_dungeon == Dungeon_type.NECRO.value):
                 # click sur GO
                         while (pyautogui.locateOnScreen('../img/9_GO.png', region=(1428, 808, 181, 154), confidence=0.95) == None):
                             if (pyautogui.locateOnScreen('../img/6_GO.png', region=(1316, 683, 392, 316), confidence=0.95)
@@ -1084,8 +1130,10 @@ def launch_dungeon(status_dungeon, click_building_status, close_window_status, d
                 #         time.sleep(time_sleep)
 
 def get_window_status():
-    if (pyautogui.locateOnScreen('../img/window_giant.jpg', region=(609, 102, 918, 162), confidence=0.9)):
+    if (pyautogui.locateOnScreen('../img/window_old_giant.jpg', region=(609, 102, 918, 162), confidence=0.9)):
         return Dungeon_type.GIANT.value
+    #if (pyautogui.locateOnScreen('../img/window_giant.jpg', region=(609, 102, 918, 162), confidence=0.9)):
+    #    return Dungeon_type.GIANT.value
     if (pyautogui.locateOnScreen('../img/window_dragon.jpg', region=(609, 102, 918, 162), confidence=0.9)):
             return Dungeon_type.DRAGON.value
     if (pyautogui.locateOnScreen('../img/window_necro.jpg', region=(609, 102, 918, 162), confidence=0.9)):
