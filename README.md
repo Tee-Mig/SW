@@ -11,6 +11,7 @@
 -full hd screen<br/>
 
 ## Installation requirement
+_-install python and git bash_<br/>
 On commands prompt or git bash write:<br/>
 _-pip install --upgrade_<br/>
 _-pip install pyautogui_<br/>
